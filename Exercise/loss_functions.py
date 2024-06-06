@@ -1,5 +1,6 @@
 import math 
 import random
+
 def calculate_loss(_name = None, _num_sample = None) -> float: 
     """
     ##Parameter

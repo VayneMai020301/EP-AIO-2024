@@ -1,3 +1,4 @@
+
 # How to see function description 
 ```
 cd .\Exercise\
@@ -5,6 +6,7 @@ python -c "from activation_functions import *; help(activation)"\
 
 python -c "from [module] import *; help[function]"
 ```
+
 # How to run activation function in the module
 ```
 cd .\Exercise\

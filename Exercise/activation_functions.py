@@ -1,5 +1,6 @@
 import numpy as np
 
+<<<<<<< HEAD
 
 def activation(_name =None, _value= None, _alpha = 0.0) -> float:
   """
