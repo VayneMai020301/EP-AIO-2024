@@ -25,7 +25,7 @@ def __source_split(source) -> list:
         source_list.append(character)
     return source_list
 
-def __create_maxtrix(source, target ) ->list[list]:
+def __create_maxtrix(source, target ) -> tuple:
 
     num_columns = len(target) +1  ; num_rows = len(source) + 1
 
@@ -36,11 +36,9 @@ def __create_maxtrix(source, target ) ->list[list]:
     for j in range(num_columns) : # Set first columns = 0,1,2
         matrix[0][j] = j
 
-    return matrix, num_rows, num_columns
+    return (matrix, num_rows, num_columns)
 
 def levenshtein_distance(source = None, target = None) -> int:
-    
-   
        
     source_list  =__source_split (source)
     target_list  =__source_split (target)
@@ -61,9 +59,9 @@ def levenshtein_distance(source = None, target = None) -> int:
             matrix[i][j] = min(delete_cost,insert_cost,sub_cost  )
             lenvashtein_dis.append(min(delete_cost,insert_cost, sub_cost ))
 
-    return float(matrix[num_rows-1][num_columns-1])
+    return int(matrix[num_rows-1][num_columns-1])
 
 if __name__ == "__main__":
 
-    assert (levenshtein_distance("yu","you")) == 1.0 
+    assert (levenshtein_distance("yu","you") == 1)
     print (levenshtein_distance("hola","hello"))

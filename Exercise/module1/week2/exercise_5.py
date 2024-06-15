@@ -1,4 +1,4 @@
-def check_the_number(x):
+def check_the_number():
 
     list_of_numbers = []
     results = ""
@@ -13,7 +13,7 @@ def check_the_number(x):
 
 if __name__ =="__main__":
     N = 7
-    assert check_the_number (N) == " False "
+    assert check_the_number()== " False "
 
     N = 2
-    print(check_the_number (N))
+    print(check_the_number())
