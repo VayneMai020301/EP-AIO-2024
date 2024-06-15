@@ -8,6 +8,7 @@ def count_token(path_file):
         for line in data:
             line = line.strip("\n")
             for token in line.split(" "):
+                token = token.lower()
                 if token not in token_dict.keys():
                     token_dict[token] = 1
                 else:
