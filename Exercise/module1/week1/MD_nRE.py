@@ -1,6 +1,6 @@
 import math
 
-def cal_mdnRE(y = None, y_predict=None,n = None, p = None) -> float:
+def cal_mdnre(y = None, y_predict=None,n = None, p = None) -> float:
     
     """
     ## Parameter
