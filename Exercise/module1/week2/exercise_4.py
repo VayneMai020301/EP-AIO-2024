@@ -38,9 +38,8 @@ def __create_maxtrix(source, target ) -> tuple:
 
     return (matrix, num_rows, num_columns)
 
-def levenshtein_distance(source = None, target = None) -> float:
-    
-   
+def levenshtein_distance(source = None, target = None) -> int:
+
        
     source_list  =__source_split (source)
     target_list  =__source_split (target)
@@ -61,9 +60,9 @@ def levenshtein_distance(source = None, target = None) -> float:
             matrix[i][j] = min(delete_cost,insert_cost,sub_cost  )
             lenvashtein_dis.append(min(delete_cost,insert_cost, sub_cost ))
 
-    return float(matrix[num_rows-1][num_columns-1])
+    return int(matrix[num_rows-1][num_columns-1])
 
 if __name__ == "__main__":
 
-    assert (levenshtein_distance("yu","you")) == 1.0
+    assert (levenshtein_distance("yu","you") == 1)
     print (levenshtein_distance("hola","hello"))
