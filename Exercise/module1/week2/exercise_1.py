@@ -5,7 +5,7 @@ __doc__= """
 """
 
 def max_kernel(num_list:list, 
-               kernel_size:int , stride:int = 1) -> list:
+               kernel_size:int) -> list:
 
     """
     num_list: input list 
