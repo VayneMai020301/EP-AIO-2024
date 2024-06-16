@@ -13,9 +13,10 @@ def evaluation(tp= None, fp= None, fn= None):
   
   """
 
-  assert str(tp).isnumeric(), print("[ERROR]: Please typing value in int")
-  assert str(fp).isnumeric(), print("[ERROR]: Please typing value in int")
-  assert str(fn).isnumeric(), print("[ERROR]: Please typing value in int")
+  notifications = "[ERROR]: Please typing value in int"
+  assert str(tp).isnumeric(), print(notifications)
+  assert str(fp).isnumeric(), print(notifications)
+  assert str(fn).isnumeric(), print(notifications)
 
   print("--"*30)
   precison = tp/(tp+fp)
