@@ -6,7 +6,6 @@ import torch.nn as nn
         keepdim: [= True] that mean keep all of axis after you calculated
         keepdim: [=False] remove axis
 
-
 '''
 class SoftMax(nn.Module):
     ''''
