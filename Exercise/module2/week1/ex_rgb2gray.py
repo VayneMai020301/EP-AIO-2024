@@ -5,31 +5,31 @@ import cv2
 img = mpimg.imread ("dog.jpeg")    
 
 def lightness(img):
-
+    img = img.astype(float)
     channel_r = img[:,:,0]
     channel_g = img[:,:,1]
     channel_b = img[:,:,2]
 
     gray_value = (np.maximum(channel_r, np.maximum(channel_g, channel_b)) + np.minimum(channel_r, + np.minimum(channel_g, channel_b))) /2
-    return gray_value
+    return gray_value.astype(np.uint8)
 
 def avaerage(img):
-
+    img = img.astype(float)
     channel_r = img[:,:,0]
     channel_g = img[:,:,1]
     channel_b = img[:,:,2]
 
     gray_value = channel_r /3 + channel_g/3 + channel_b/3
-    return gray_value
+    return gray_value.astype(np.uint8)
 
 def luminority(img):
-
+    img = img.astype(float)
     channel_r = img[:,:,0]
     channel_g = img[:,:,1]
     channel_b = img[:,:,2]
 
     gray_value = channel_r * 0.21 + channel_g *  0.72 + channel_b* 0.07
-    return gray_value
+    return gray_value.astype(np.uint8)
 
 
 if __name__ == "__main__":
